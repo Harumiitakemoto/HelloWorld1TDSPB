@@ -1,4 +1,5 @@
 import entities.Conteudo;
+import entities.Jogo;
 import services.FilmeService;
 import services.JogoService;
 
@@ -36,42 +37,38 @@ public class Main {
                             case 1 -> jogoService.AdicionarJogo(scan, catalogo);
                             case 2 -> jogoService.ListarJogos(catalogo);
                             case 3 -> jogoService.RemoverJogo(scan, catalogo);
-                            case 4 -> voltar = true;
-                            default -> println("Opção inválida!");
+                            case 4 -> jogoService.AvaliarJogo(scan, catalogo);
+                            case 0 -> voltar = true;
+                            default -> System.out.println("Opção inválida!");
                         }
                     }
                 }
                 case 2 -> {
                     var voltar = false;
                     while (!voltar) {
-
                         println("-----------------------------------");
                         println(filmeService.MENU_FILME);
+
                         var opcao = scanInt(scan);
 
                         switch (opcao) {
                             case 4 -> voltar = true;
-                            case 1 -> println("cadastre novo filme - Em construção");
+                            case 1 -> println("Cadastre novo filme - Em construção");
                             default -> println("Opção inválida!");
                         }
+
                     }
-
                 }
-
             }
-
         }
-
     }
 
-
-        public static final String MENU_PRINCIPAL = """
-            Bem vindo ao sistema de gerenciamento de mídias!
-            Digite o conteúdo que deseja gerenciar:
-            0 - Sair
-            1 - Jogos
-            2 - Filmes
-            3 - Series
-            """;
+    public static final String MENU_PRINCIPAL = """
+                        Bem vindo ao sistema de gerenciamento de mídias!
+                        Digite o conteúdo que deseja gerenciar:
+                        0 - Sair
+                        1 - Jogos
+                        2 - Filmes
+                        3 - Series
+                    """;
 }
-        
