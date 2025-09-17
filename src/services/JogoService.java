@@ -15,6 +15,7 @@ public class JogoService {
                         2 - Listar jogos cadastrados
                         3 - Remover jogo
                         4 - Avaliar Jogo
+                        5 - Listar Avaliações
                         0 - Voltar
                         """;
 

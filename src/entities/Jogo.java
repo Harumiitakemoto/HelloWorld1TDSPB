@@ -20,7 +20,7 @@ public class Jogo extends Conteudo {
                 "plataforma='" + plataforma + '\'' +
                 ", titulo='" + titulo + '\'' +
                 ", dataLancamento=" + dataLancamento +
-                ", Avaliacoes=" + Avaliacoes +
+                ", nota =" + getMediaAvaliacoes() +
                 '}';
     }
 }
