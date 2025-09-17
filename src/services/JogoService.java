@@ -73,5 +73,15 @@ public class JogoService {
         jogo.Avaliacoes.add(avaliacao);
         IOUtils.println("Avaliação adicionada com sucesso!");
     }
+
+    public void ListarAvaliacoes(Scanner scan, ArrayList<Conteudo> catalogo){
+        IOUtils.println("Digite o núero do jogo que deseja ver as avaliações");
+
+        var numJogo = IOUtils.scanInt(scan);
+        var jogo = (Jogo) catalogo.get(numJogo);
+
+        for(var avaliacao : jogo.Avaliacoes)
+            IOUtils.println(avaliacao.toString());
+    }
 }
 

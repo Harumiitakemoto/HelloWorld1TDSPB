@@ -6,5 +6,5 @@ import java.util.ArrayList;
 public class Conteudo {
     public String titulo;
     public LocalDate dataLancamento;
-    public ArrayList<Avaliacao> Avaliacoes;
+    public ArrayList<Avaliacao> Avaliacoes = new ArrayList<>();
 }
